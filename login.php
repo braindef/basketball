@@ -36,19 +36,11 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
 
 <style>
-#container {
-    display: flex;           /* establish flex container */
-    flex-direction: column;  /* make main axis vertical */
-    justify-content: center; /* center items vertically, in this case */
-    align-items: center;     /* center items horizontally, in this case */
-    height: 300px;
-}
-
-.box {
-    width: 300px;
-    margin: 5px;
-    text-align: center;     /* will center text in <p>, which is not a flex item */
-}
+.container {
+  height: 300px;
+  width: 300px;
+  background: #eee;
+  margin: 50px auto;
 }
 
 </style>
