@@ -102,7 +102,7 @@ else
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
-				<td class="gray"><?php echo date("j", strtotime($faq[$k]["datum"]); ?></td>
+				<td class="gray"><?php echo date("j", strtotime($faq[$k]["datum"])); ?></td>
 
 
 <?php
