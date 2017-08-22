@@ -37,13 +37,18 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
 <style>
 #container {
-    height: 200px;
-    line-height: 200px;
-    background-color: red; 
-    vertical-align: middle;
+    display: flex;           /* establish flex container */
+    flex-direction: column;  /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center;     /* center items horizontally, in this case */
+    height: 300px;
 }
-#container table {
-    vertical-align: middle;
+
+.box {
+    width: 300px;
+    margin: 5px;
+    text-align: center;     /* will center text in <p>, which is not a flex item */
+}
 }
 
 </style>
@@ -55,7 +60,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
 
 <body>
-<div id="container">
+<div class="box">
 <form action="" method="post">
 
     <table width="200" border="0">
@@ -73,8 +78,8 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
   </tr>
 </table>
 </form>
-Alle aktivitäten und IP Adressen werden gespeichert.
 </div>
+Alle Aktivitäten mit IP Adresse werden gespeichert.
 </body>
 </html>
 
