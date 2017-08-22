@@ -108,8 +108,6 @@ else $jahr=date(Y);
  {
  ?>
 
-				<td class="gray">logged in</td>
-
 				<td contenteditable="true" onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
 
 				<td contenteditable="true" onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["abends"]; ?></td>
@@ -121,7 +119,6 @@ else $jahr=date(Y);
  else
  {
    ?>
-				<td class="gray">logged out</td>
 
 				<td> <?php echo $faq[$k]["morgen"]; ?></td>
 
