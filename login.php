@@ -37,7 +37,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
 <style>
 .container {
-  width: 300px;
+  width: 350px;
   height: 120px;
 
   background: #eee;
@@ -50,7 +50,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 <body>
 <div class="container">
   <form action="" method="post">
-    <table width="200" border="0">
+    <table width="250" border="0">
       <tr>
         <td>Benutzername</td>
         <td> <input type="text" name="user" > </td>
