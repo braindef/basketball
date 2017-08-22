@@ -35,7 +35,7 @@ else $jahr=date(Y);
 		} 
 		
 		function saveToDatabase(editableObj,column,id) {
-			$(editableObj).css("background","#F0F url(loaderIcon.gif) no-repeat right");
+			$(editableObj).css("background","#FF url(loaderIcon.gif) no-repeat right");
 			$.ajax({
 				url: "saveedit.php",
 				type: "POST",
@@ -111,7 +111,7 @@ else
  {
  ?>
 
-				<td contenteditable="true" bgcolor=red onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
+				<td contenteditable="true" style="background-color:#ff0000;" onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
 
 				<td contenteditable="true" onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["abends"]; ?></td>
 			  </tr>
