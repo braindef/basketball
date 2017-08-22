@@ -13,8 +13,8 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
      $user = $_POST['user'];
      $pass = $_POST['pass'];
 
-      if($user == "hans" && $pass == "123456")  // username is  set to "Ank"  and Password   
-         {                                      // is 1234 by default     
+      if($user == "hans" && $pass == "123456") 
+         {                                     
 
           $_SESSION['user']=$user;
 

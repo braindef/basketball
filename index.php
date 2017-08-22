@@ -62,6 +62,8 @@ else $jahr=date(Y);
 		</script>
     </head>
     <body>
+
+<div> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli"> </a> </div> 
 	   <table class="tbl-qa">
 		  <thead>
 
