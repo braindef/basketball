@@ -34,10 +34,27 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
 <title> Login Page   </title>
 
+
+<style>
+#container {
+    height: 200px;
+    line-height: 200px;
+    background-color: red; 
+}
+
+#container img {
+    vertical-align: middle;
+}
+</style>
+
 </head>
 
+
+
+
+
 <body>
-<div width=200 style="background-color: red; margin:auto;">
+<div width=200			 style="margin:auto;">
 <form action="" method="post">
 
     <table width="200" border="0">
