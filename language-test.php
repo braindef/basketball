@@ -13,7 +13,7 @@ setlocale(LC_TIME, "de_DE.UTF-8");
 echo strftime(" in German %A.\n");
 echo "<br> <br> <br> <br> <br> :";
 setlocale(LC_TIME, "de_DE.UTF-8");
-echo strftime("%A %d %B %Y", strtotime('10/16/2003'))
+echo strftime("%A %d %B %Y", strtotime('1.10.2017'))
 ?>
 
 
