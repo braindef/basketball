@@ -23,8 +23,8 @@ else $jahr=date(Y);
 			body{width:610px;}
 			.current-row{background-color:#B24926;color:#FFF;}
 			.current-col{background-color:#1b1b1b;color:#FFF;}
-			.tbl-qa{width: 100%;font-size:0.9em;background-color: #f5f5f5; text-align:center;}
-			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;  background-color:#5d501cff}
+			.tbl-qa{width: 100%;font-size:0.9em;background-color: #5d501cff; text-align:center;}
+			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;}
 			.tbl-qa .table-row td {padding:1px;background-color: #FDFDFD;}
                         .hidden { display: none; }
 			.gray { font-weight: bold;  }
