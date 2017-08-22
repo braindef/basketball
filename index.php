@@ -115,8 +115,9 @@ else $jahr=date(Y);
 				<td> <?php echo $faq[$k]["abends"]; ?></td>
 			  </tr>
 
-
+ <?php
  }
+   ?>
 
 
 		  </tbody>
