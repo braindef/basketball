@@ -102,7 +102,7 @@ else
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
-				<td class="gray"><?php setlocale(LC_TIME, "de_DE"); echo strftime(" in German %A.\n"); echo date("D, j. F Y", strtotime($faq[$k]["datum"])); ?></td>
+				<td class="gray"><?php setlocale(LC_TIME, "de_DE.UTF-8"); echo date("D, j. F Y", strtotime($faq[$k]["datum"])); ?></td>
 
 
 <?php
