@@ -35,7 +35,7 @@ else $jahr=date(Y);
 		} 
 		
 		function saveToDatabase(editableObj,column,id) {
-			$(editableObj).css("background","#FFF url(loaderIcon.gif) no-repeat right");
+			$(editableObj).css("background","#F0F url(loaderIcon.gif) no-repeat right");
 			$.ajax({
 				url: "saveedit.php",
 				type: "POST",
