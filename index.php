@@ -50,7 +50,7 @@ else $jahr=date(Y);
     </head>
     <body>
 
-<div style="margin-top: 10px; margin-bottom: 10px;"> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli" width=100> </a> </div> 
+<div style="margin-top: 10px; margin-bottom: 10px; background-color:#5d501cff"> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli" width=150> </a> </div> 
 <?php
 if(!isset($_SESSION['user'])) // If session is not set then redirect to Login Page
        {
