@@ -111,9 +111,9 @@ else
  {
  ?>
 
-				<td contenteditable="true" <?php if ($faq[$k]["morgen"] == "") echo "style=\"background-color:#ff0000;\""?> onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
+				<td contenteditable="true" <?php if ($faq[$k]["morgen"] == "") echo "style=\"background-color:#ff6347;\""?> onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
 
-				<td contenteditable="true" <?php if ($faq[$k]["abends"] == "") echo "style=\"background-color:#ff0000;\""?> onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["abends"]; ?></td>
+				<td contenteditable="true" <?php if ($faq[$k]["abends"] == "") echo "style=\"background-color:#ff6347;\""?> onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["abends"]; ?></td>
 			  </tr>
 		
  <?php
