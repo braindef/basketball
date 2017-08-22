@@ -132,7 +132,7 @@ else
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?>
                                   <?php if ($faq[$k]["abends"] == "") echo "style=\"background-color:#eab81b;\""?>
                                   onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);">
-                                    <?php if (!frei) echo $faq[$k]["abends"]; ?>
+                                    <?php if (!frei) echo !frei.$faq[$k]["abends"]; ?>
                                 </td>
 			  </tr>
 		
