@@ -31,20 +31,10 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
  ?>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="small-style.css" target="_blank">
+    <meta charset="utf-8">
+    <title> Login Page   </title>
 
-<title> Login Page   </title>
-
-
-<style>
-.container {
-  width: 350px;
-  height: 120px;
-  border-radius: 20px;
-  background: #eee;
-  margin: 50px auto;
-  padding: 20px;
-}
-</style>
 
 </head>
 <body>

@@ -1,74 +1,8 @@
-html {
-padding: 8px 25px;
-list-style: none;
-background: #282828;
-color: #ffffff; 
-font-family: monospace; }
-
-/* unvisited link */
-a:link {
-    color: #FFFFFF;
+.login {
+  width: 350px;
+  height: 120px;
+  border-radius: 20px;
+  background: #eee;
+  margin: 50px auto;
+  padding: 20px;
 }
-
-/* visited link */
-a:visited {
-    color: #BBBBBB;
-}
-
-
-.slidein {
-  font-size: 2em; 
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: 3;
-  animation-direction: alternate;
-}
-
-@keyframes slidein {
-  from {
-    margin-left:5%;
-    width:100%
-  }
-  
-  to {
-    margin-left:0%;
-    width:100%;
-  }
-}
-
-.blink {
-    animation-duration: 1s;
-    animation-name: blink;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-}
-@keyframes blink {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.fl
-{
-    height: 470px;
-    float: left;
-    margin: 10;
-    padding: 10;
-} 
-
-.center
-{
-
-  text-align: center;
-  margin: 0 auto;
-}
-
-.w70
-{
- width: 60%;
- height: 82;
-}​
