@@ -20,7 +20,7 @@ else $jahr=date(Y);
     <head>
       <title>PHP MySQL Inline Editing using jQuery Ajax</title>
 		<style>
-			body{ margin:auto; }
+			body{ padding: 20px; margin: auto; }
 			.current-row{background-color:#B24926;color:#FFF;}
 			.current-col{background-color:#5d501c;color:#FFF;}
 			.tbl-qa{width: 100%;font-size:0.9em;background-color: #f5f5f5; text-align:center;}
