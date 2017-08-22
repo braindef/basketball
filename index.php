@@ -1,19 +1,6 @@
 <?php
  session_start();
 
-if(!isset($_SESSION['user'])) // If session is not set then redirect to Login Page
-       {
-//           header("Location:login.php");  
-          echo "<a href='login.php'> Login</a> "; 
-       }
-else
-{
-          echo $_SESSION['user'];
-
-          echo "Login Success";
-
-          echo "<a href='logout.php'> Logout</a> "; 
-}
 
 require_once("dbcontroller.php");
 $db_handle = new DBController();
@@ -64,6 +51,21 @@ else $jahr=date(Y);
     <body>
 
 <div> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli"> </a> </div> 
+<?php
+if(!isset($_SESSION['user'])) // If session is not set then redirect to Login Page
+       {
+//           header("Location:login.php");  
+          echo "<a href='login.php'> Login</a> "; 
+       }
+else
+{
+          //echo $_SESSION['user'];
+
+          //echo "Login Success";
+
+          echo "<a href='logout.php'> Logout</a> "; 
+}
+?>
 	   <table class="tbl-qa">
 		  <thead>
 
