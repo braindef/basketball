@@ -119,7 +119,7 @@ else
  ?>
 
 				<td contenteditable="true"
-                                  <?php if (!$frei)&&($faq[$k]["morgen"] == "") echo "style=\"background-color:#eab81b;\""?>
+                                  <?php if ((!$frei)&&($faq[$k]["morgen"] == "")) echo "style=\"background-color:#eab81b;\""?>
                                   <?php if ($frei) echo "style=\"background-color:#000;\""; //Samstage und Sonntage schwarz ?>
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?>
 
