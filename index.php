@@ -1,4 +1,6 @@
 <?php
+ session_start();
+
 require_once("dbcontroller.php");
 $db_handle = new DBController();
 $sql = "SELECT * from basketball";
@@ -71,23 +73,52 @@ else $jahr=date(Y);
 			  </tr>
 		  </thead>
 		  <tbody>
-		  <?php
-		  foreach($faq as $k=>$v) {
-                    if ($faq[$k]["datum"]>=sprintf("%04d-%02d-%02d", $jahr, $monat, "1")) {
-                      if ($faq[$k]["datum"]<=sprintf("%04d-%02d-%02d", $jahr, $monat, "31")) {
-		  ?>
+		<?php
+		  foreach($faq as $k=>$v)
+                  {
+                    if ($faq[$k]["datum"]>=sprintf("%04d-%02d-%02d", $jahr, $monat, "1"))
+                    {
+                      if ($faq[$k]["datum"]<=sprintf("%04d-%02d-%02d", $jahr, $monat, "31"))
+                      {
+		?>
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
 				<td class="gray"><?php echo $faq[$k]["datum"]; ?></td>
+<!--><?<-->
+
+<?php
+		      }
+                    }
+                 }
+
+ if (isset($_SESSION['user']))
+ {
+ ?>
+   logged in HTML and code here
 
 				<td contenteditable="true" onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
 
 				<td contenteditable="true" onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["abends"]; ?></td>
 			  </tr>
-		<?php
-		} } }
-		?>
+		
+ <?php
+
+ }
+ else
+ {
+   ?>
+   Not logged in HTML and code here
+
+				<td> <?php echo $faq[$k]["morgen"]; ?></td>
+
+				<td> <?php echo $faq[$k]["abends"]; ?></td>
+			  </tr>
+
+
+ }
+
+
 		  </tbody>
 		</table>
     </body>
