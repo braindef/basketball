@@ -39,7 +39,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 .container {
   width: 350px;
   height: 120px;
-  border-radius: 15px
+  border-radius: 1px
   background: #eee;
   margin: 50px auto;
   padding: 20px;
