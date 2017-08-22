@@ -93,7 +93,6 @@ else $jahr=date(Y);
  if (isset($_SESSION['user']))
  {
  ?>
-   logged in HTML and code here
 
 				<td contenteditable="true" onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
 
@@ -106,8 +105,6 @@ else $jahr=date(Y);
  else
  {
    ?>
-   Not logged in HTML and code here
-
 				<td> <?php echo $faq[$k]["morgen"]; ?></td>
 
 				<td> <?php echo $faq[$k]["abends"]; ?></td>
