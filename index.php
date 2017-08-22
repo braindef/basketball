@@ -24,7 +24,7 @@ else $jahr=date(Y);
 			.current-row{background-color:#B24926;color:#FFF;}
 			.current-col{background-color:#1b1b1b;color:#FFF;}
 			.tbl-qa{width: 100%;font-size:0.9em;background-color: #f5f5f5; text-align:center;}
-			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;}
+			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;  background-color:#5d501cff"}
 			.tbl-qa .table-row td {padding:1px;background-color: #FDFDFD;}
                         .hidden { display: none; }
 			.gray { font-weight: bold;  }
@@ -50,7 +50,7 @@ else $jahr=date(Y);
     </head>
     <body>
 
-<div style="margin-top: 10px; margin-bottom: 10px; background-color:#5d501cff"> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli" width=150> </a> </div> 
+<div style="margin-top: 10px; margin-bottom: 10px;> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli" width=150> </a> </div> 
 <?php
 if(!isset($_SESSION['user'])) // If session is not set then redirect to Login Page
        {
