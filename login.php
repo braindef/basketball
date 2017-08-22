@@ -44,36 +44,30 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
   margin: 50px auto;
   padding: 10px;
 }
-
 </style>
 
 </head>
-
-
-
-
-
 <body>
 <div class="container">
-<form action="" method="post">
-
+  <form action="" method="post">
     <table width="200" border="0">
-  <tr>
-    <td>  UserName</td>
-    <td> <input type="text" name="user" > </td>
-  </tr>
-  <tr>
-    <td> PassWord  </td>
-    <td><input type="password" name="pass"></td>
-  </tr>
-  <tr>
-    <td> <input type="submit" name="login" value="LOGIN"></td>
-    <td></td>
-  </tr>
-</table>
-</form>
-</div>
+      <tr>
+        <td>Benutzername</td>
+        <td> <input type="text" name="user" > </td>
+      </tr>
+        <tr>
+          <td>Passwort</td>
+          <td><input type="password" name="pass"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td> <input type="submit" name="login" value="LOGIN"></td>
+        </tr>
+      </table>
+    </form>
 Alle Aktivitäten mit IP Adresse werden gespeichert.
+</div>
+
 </body>
 </html>
 
