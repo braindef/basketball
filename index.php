@@ -103,7 +103,7 @@ else
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
 				<td <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\"";
-                                          if (strftime("%A", strtotime($faq[$k]["datum"])=="Sonntag") echo "style=\"background-color:#000;\""; ?>>
+                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") echo "style=\"background-color:#000;\""; ?>>
                                             <?php setlocale(LC_TIME, "de_DE.UTF-8"); echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); ?>
                                 </td>
 
