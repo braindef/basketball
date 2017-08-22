@@ -99,7 +99,7 @@ else
                       if ($faq[$k]["datum"]<=sprintf("%04d-%02d-%02d", $jahr, $monat, "31"))
                       {
 		?>
-			  <tr class="table-row" <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\"" //aktuelles Datum cyan farben?>>
+			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
                                    <?php $frei=false;
@@ -107,10 +107,8 @@ else
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") $frei=true; ?>
 
 				<td <?php if($frei) echo "style=\"background-color:#000;\""; //Samstage und Sonntage schwarz ?>
-
-                                <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""; //aktuelles Datum cyan farben ?>
-
-                                  <?php setlocale(LC_TIME, "de_DE.UTF-8"); echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); //Datum mit locale de_DE.UTF8 anzeigen?>
+                                  <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""; //aktuelles Datum Cyan farben ?>
+                                    <?php setlocale(LC_TIME, "de_DE.UTF-8"); echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); //Datum mit locale de_DE.UTF8 anzeigen?>
                                 </td>
 
 
