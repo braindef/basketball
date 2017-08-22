@@ -106,7 +106,7 @@ else
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Samstag") $frei=true;
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") $frei=true; ?>
 
-				<td <?php if(!frei) echo "style=\"background-color:#000;\""; //Samstage und Sonntage schwarz ?>
+				<td <?php if(!$frei) echo "style=\"background-color:#000;\""; //Samstage und Sonntage schwarz ?>
 
                                 <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""; //aktuelles Datum cyan farben ?>
 
@@ -125,14 +125,14 @@ else
                                   <?php if ($faq[$k]["morgen"] == "") echo "style=\"background-color:#eab81b;\""?>
                                   onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')"
                                   onClick="showEdit(this);">
-                                    <?php if (!frei) echo $faq[$k]["morgen"]; ?>
+                                    <?php if (!$frei) echo $faq[$k]["morgen"]; ?>
                                 </td>
 
 				<td contenteditable="true"
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?>
                                   <?php if ($faq[$k]["abends"] == "") echo "style=\"background-color:#eab81b;\""?>
                                   onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);">
-                                    <?php if (!frei) echo !frei.$faq[$k]["abends"]; ?>
+                                    <?php if (!$frei) echo $faq[$k]["abends"]; ?>
                                 </td>
 			  </tr>
 		
