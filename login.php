@@ -58,12 +58,9 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
         <tr>
           <td>Passwort</td>
           <td><input type="password" name="pass"></td>
-        </tr>
-        <tr></tr>
-        <tr>
-          <td></td>
           <td> <input type="submit" name="login" value="LOGIN"></td>
         </tr>
+        <tr></tr>
       </table>
     </form>
 Alle Aktivitäten mit IP Adresse werden gespeichert.
