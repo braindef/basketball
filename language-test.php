@@ -11,6 +11,10 @@ setlocale(LC_TIME, "de_DE.ISO8859-1");
 echo strftime(" in German %A.\n");
 setlocale(LC_TIME, "de_DE.UTF-8");
 echo strftime(" in German %A.\n");
+
+<br><br><br>
+setlocale(LC_TIME, "de_DE.UTF-8");
+echo strtotime("%A %d %B %Y", "2017-08-23")
 ?>
 
 
