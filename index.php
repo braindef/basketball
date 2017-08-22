@@ -99,7 +99,7 @@ else
                       if ($faq[$k]["datum"]<=sprintf("%04d-%02d-%02d", $jahr, $monat, "31"))
                       {
 		?>
-			  <tr class="table-row">
+			  <tr class="table-row" <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?>>
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
 				<td <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?>  ><?php setlocale(LC_TIME, "de_DE.UTF-8"); echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); ?></td>
@@ -112,7 +112,7 @@ else
  {
  ?>
 
-				<td contenteditable="true" <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?> <?php if ($faq[$k]["morgen"] == "") echo "style=\"background-color:#eab81b;\""?> onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
+				<td contenteditable="true"  <?php if ($faq[$k]["morgen"] == "") echo "style=\"background-color:#eab81b;\""?> onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["morgen"]; ?></td>
 
 				<td contenteditable="true" <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?> <?php if ($faq[$k]["abends"] == "") echo "style=\"background-color:#eab81b;\""?> onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);"><?php echo $faq[$k]["abends"]; ?></td>
 			  </tr>
