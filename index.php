@@ -85,7 +85,7 @@ else $jahr=date(Y);
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
 				<td class="gray"><?php echo $faq[$k]["datum"]; ?></td>
-<!--><?<-->
+
 
 <?php
 		      }
