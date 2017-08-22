@@ -37,7 +37,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 </head>
 
 <body>
-
+<div style="margin:auto;">
 <form action="" method="post">
 
     <table width="200" border="0">
@@ -55,7 +55,8 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
   </tr>
 </table>
 </form>
-
+Alle aktivitäten und IP Adressen werden gespeichert.
+</div>
 </body>
 </html>
 
