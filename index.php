@@ -1,14 +1,14 @@
 <?php
  session_start();
 
-if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+if(!isset($_SESSION['user'])) // If session is not set then redirect to Login Page
        {
 //           header("Location:login.php");  
           echo "<a href='login.php'> Login</a> "; 
        }
 else
 {
-          echo $_SESSION['use'];
+          echo $_SESSION['user'];
 
           echo "Login Success";
 
