@@ -1,6 +1,18 @@
 <?php
  session_start();
 
+if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
+       {
+           header("Location:Login.php");  
+       }
+else
+{
+          echo $_SESSION['use'];
+
+          echo "Login Success";
+
+          echo "<a href='logout.php'> Logout</a> "; 
+}
 require_once("dbcontroller.php");
 $db_handle = new DBController();
 $sql = "SELECT * from basketball";
