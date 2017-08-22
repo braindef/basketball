@@ -86,8 +86,8 @@ else
 			  <tr>
 				<th class="table-header hidden" width="10%">id</th>
 				<th class="table-header" width="20%">Datum</th>
-				<th class="table-header" width="40%">Morgen</th>
-				<th class="table-header" width="40%">Abends</th>
+				<th class="table-header" width="40%">Morgen bis 10:00</th>
+				<th class="table-header" width="40%">Abends um 18:00</th>
 			  </tr>
 		  </thead>
 		  <tbody>
@@ -102,7 +102,7 @@ else
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
-				<td class="gray"><?php echo $faq[$k]["datum"]; ?></td>
+				<td class="gray"><?php echo date("j", strtotime($faq[$k]["datum"]); ?></td>
 
 
 <?php
