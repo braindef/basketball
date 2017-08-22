@@ -42,6 +42,10 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     background-color: red; 
     vertical-align: middle;
 }
+#container table {
+    vertical-align: middle;
+}
+
 </style>
 
 </head>
