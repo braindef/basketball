@@ -88,9 +88,7 @@ else $jahr=date(Y);
 
 
 <?php
-		      }
-                    }
-                 }
+
 
  if (isset($_SESSION['user']))
  {
@@ -116,6 +114,9 @@ else $jahr=date(Y);
 			  </tr>
 
  <?php
+		      }
+                    }
+                 }
  }
    ?>
 
