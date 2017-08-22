@@ -40,9 +40,6 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     height: 200px;
     line-height: 200px;
     background-color: red; 
-}
-
-#container img {
     vertical-align: middle;
 }
 </style>
@@ -54,7 +51,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
 
 <body>
-<div width=200			 style="margin:auto;">
+<div id="container">
 <form action="" method="post">
 
     <table width="200" border="0">
