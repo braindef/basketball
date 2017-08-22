@@ -20,7 +20,7 @@ else $jahr=date(Y);
     <head>
       <title>PHP MySQL Inline Editing using jQuery Ajax</title>
 		<style>
-			body{ padding: 20px; margin: auto; }
+			body{ padding: 40px; margin: auto; }
 			.current-row{background-color:#B24926;color:#FFF;}
 			.current-col{background-color:#5d501c;color:#FFF;}
 			.tbl-qa{width: 100%;font-size:0.9em;background-color: #f5f5f5; text-align:center;}
@@ -50,7 +50,7 @@ else $jahr=date(Y);
     </head>
     <body>
 
-<div style="margin-top: 10px; margin-bottom: 10px;> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli" width=150> </a> </div> 
+<div style="margin-top: 10px; margin-bottom: 10px;> <a title="Home" href="https://gztelli.ch"><img src="./gztelli.svg" alt="GZ Telli" width=300> </a> </div> 
 <?php
 if(!isset($_SESSION['user'])) // If session is not set then redirect to Login Page
        {
