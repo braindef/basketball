@@ -102,7 +102,7 @@ else
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
-				<td class="gray"><?php setlocale(LC_TIME, "de_DE.UTF-8"); echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); ?></td>
+				<td <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#eab81b;\""?>  ><?php setlocale(LC_TIME, "de_DE.UTF-8"); echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); ?></td>
 
 
 <?php
