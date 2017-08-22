@@ -23,16 +23,15 @@ else $jahr=date(Y);
 			body{ padding: 40px; margin: auto; }
 			.current-row{background-color:#B24926;color:#FFF;}
 			.current-col{background-color:#5d501c;color:#FFF;}
-			.tbl-qa{width: 100%;font-size:0.9em;background-color: #00f5f5; text-align:center;}
+			.tbl-qa{width: 100%;font-size:0.9em;background-color: #f0f5f5; text-align:center;}
 			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;}
 			.tbl-qa .table-row td {padding:1px;background-color: #FDFDFD;}
                         .hidden { display: none; }
-			.gray { font-weight: bold;  }
 		</style>
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 		function showEdit(editableObj) {
-			$(editableObj).css("background","#FF0");
+			$(editableObj).css("background","#0FF");
 		} 
 		
 		function saveToDatabase(editableObj,column,id) {
