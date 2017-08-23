@@ -70,7 +70,7 @@ else
 		  <thead>
 
 
-                          <tr> <th><a href="index.php<?php if ($monat==1) echo "?monat=12&jahr=".($jahr-1).'"'; 
+                          <tr> <th style="color: white;"><a href="index.php<?php if ($monat==1) echo "?monat=12&jahr=".($jahr-1).'"'; 
                                                            else echo "?monat=".($monat-1)."&jahr=".$jahr.'"'; ?>> 
 
                                    ⇦ <?php $dateObj   = DateTime::createFromFormat('!m', $monat-1); echo $dateObj->format('F'); ?></a></th>
