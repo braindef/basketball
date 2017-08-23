@@ -1,3 +1,12 @@
+CREATE TABLE IF NOT EXISTS `log` (
+  `id` SMALLINT NOT NULL AUTO_INCREMENT,
+  `timestamp` text NOT NULL,
+  `query` text NOT NULL,
+  PRIMARY KEY (id)
+);
+
+
+
 CREATE TABLE IF NOT EXISTS `basketball` (
   `id` SMALLINT NOT NULL AUTO_INCREMENT,
   `datum` DATE NOT NULL UNIQUE,
