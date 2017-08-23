@@ -21,7 +21,6 @@ else $jahr=date(Y);
       <title>PHP MySQL Inline Editing using jQuery Ajax</title>
           <link rel="stylesheet" type="text/css" href="small-style.css" target="_blank">
           <meta charset="utf-8">
-          <title> Login Page   </title>
 	<!--	<style>
 			body{ padding: 40px; margin: auto; }
 			.current-row{background-color:#B24926;color:#FFF;}
