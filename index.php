@@ -23,7 +23,7 @@ else $jahr=date(Y);
 			body{ padding: 40px; margin: auto; }
 			.current-row{background-color:#B24926;color:#FFF;}
 			.current-col{background-color:#5d501c;color:#FFF;}
-			.tbl-qa{width: 100%;font-size:0.9em; color: black; background-color: #551; text-align:center;}
+			.tbl-qa{width: 100%;font-size:0.9em; color: black; background-color: #5d501c; text-align:center;}
 			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;}
 			.tbl-qa .table-row td {padding:1px;background-color: #FDFDFD;}
                         .hidden { display: none; }
@@ -106,7 +106,7 @@ else
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Samstag") $frei=true;
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") $frei=true; ?>
 
-				<td <?php if($frei) echo "style=\"background-color:#000;\""; //Samstage und Sonntage schwarz ?>
+				<td <?php if($frei) echo "style=\"background-color:#5d501c;\""; //Samstage und Sonntage schwarz ?>
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""; //aktuelles Datum Cyan farben ?> >
                                     <?php setlocale(LC_TIME, "de_DE.UTF-8"); echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); //Datum mit locale de_DE.UTF8 anzeigen?>
                                 </td>
@@ -120,7 +120,7 @@ else
 
 				<td contenteditable="true"
                                   <?php if ((!$frei)&&($faq[$k]["morgen"] == "")) echo "style=\"background-color:#eab81b;\""?>
-                                  <?php if ($frei) echo "style=\"background-color:#000;\""; //Samstage und Sonntage schwarz ?>
+                                  <?php if ($frei) echo "style=\"background-color:#999;\""; //Samstage und Sonntage schwarz ?>
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?>
 
                                   onBlur="saveToDatabase(this,'morgen','<?php echo $faq[$k]["id"]; ?>')"
@@ -130,7 +130,7 @@ else
 
 				<td contenteditable="true"
                                   <?php if ((!$frei)&&($faq[$k]["abends"] == "")) echo "style=\"background-color:#eab81b;\""?>
-                                  <?php if ($frei) echo "style=\"background-color:#000;\""; //Samstage und Sonntage schwarz ?>
+                                  <?php if ($frei) echo "style=\"background-color:#999;\""; //Samstage und Sonntage schwarz ?>
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""?>
 
                                   onBlur="saveToDatabase(this,'abends','<?php echo $faq[$k]["id"]; ?>')" onClick="showEdit(this);">
