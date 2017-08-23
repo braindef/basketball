@@ -77,7 +77,7 @@ else
 
                                <th style="font-size: 30px; color: white;"><?php $dateObj   = DateTime::createFromFormat('!m', $monat); echo $dateObj->format('F'); echo " $jahr" ?></th>
 
-                               <th><a style="color:white" "href="index.php<?php if ($monat>11) echo "?monat=1&jahr=".($jahr+1).'"'; 
+                               <th><a style="color:white" href="index.php<?php if ($monat>11) echo "?monat=1&jahr=".($jahr+1).'"'; 
                                                            else echo "?monat=".($monat+1)."&jahr=".$jahr.'"'; ?>> 
                                      <?php $dateObj   = DateTime::createFromFormat('!m', $monat+1); echo $dateObj->format('F'); ?> ⇨</a></th>
 
