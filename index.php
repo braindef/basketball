@@ -19,17 +19,8 @@ else $jahr=date(Y);
 <html>
     <head>
       <title>PHP MySQL Inline Editing using jQuery Ajax</title>
-          <link rel="stylesheet" type="text/css" href="small-style.css" target="_blank">
+          <link rel="stylesheet" type="text/css" href="./small-style.css" target="_blank">
           <meta charset="utf-8">
-	<!--	<style>
-			body{ padding: 40px; margin: auto; }
-			.current-row{background-color:#B24926;color:#FFF;}
-			.current-col{background-color:#5d501c;color:#FFF;}
-			.tbl-qa{width: 100%;font-size:0.9em; color: black; background-color: #5d501c; text-align:center;}
-			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;}
-			.tbl-qa .table-row td {padding:1px;background-color: #FDFDFD;}
-                        .hidden { display: none; }
-		</style> -->
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 		function showEdit(editableObj) {
@@ -117,7 +108,7 @@ else
 
 
 <?php
-
+//farbe 1x auswerten dann variabel für z.B. farbe
  if (isset($_SESSION['user']))
                     {
  ?>
