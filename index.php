@@ -105,7 +105,7 @@ else
 
                                    <?php 
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Samstag") $frei=true;
-                                         if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") $frei=true; echo "<".strftime("%A", strtotime($faq[$k]["datum"]).">" ?>
+                                         if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") $frei=true; echo "<"." ".">" ?>
 
 				<td <?php if($frei) echo "style=\"background-color:#999;\""; //Samstage und Sonntage schwarz ?>
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""; //aktuelles Datum Cyan farben ?> >
