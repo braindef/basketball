@@ -94,15 +94,15 @@ else
 		<?php
 		  foreach($faq as $k=>$v)
                   {
-                    if ($faq[$k]["datum"]>=sprintf("%04d-%02d-%02d", $jahr, $monat, "1"))
+                    if ($faq[$k]["datum"]>sprintf("%04d-%02d-%02d", $jahr, $monat, "1"))
                     {
-                      if ($faq[$k]["datum"]<=sprintf("%04d-%02d-%02d", $jahr, $monat, "31"))
+                      if ($faq[$k]["datum"]<sprintf("%04d-%02d-%02d", $jahr, $monat, "31"))
                       {
 		?>
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
-                                   <?php $frei=false;
+                                   <?php 
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Samstag") $frei=true;
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") $frei=true; ?>
 

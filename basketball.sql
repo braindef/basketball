@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS `basketball` (
-  `id` SMALLINT NOT NULL  AUTO_INCREMENT,
-  `datum` DATE NOT NULL,
+  `id` SMALLINT NOT NULL AUTO_INCREMENT,
+  `datum` DATE NOT NULL UNIQUE,
   `morgen` text NOT NULL,
   `abends` text NOT NULL,
   PRIMARY KEY (id)
