@@ -104,7 +104,6 @@ else
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
 
                                    <?php 
-                                         echo strftime("%A", strtotime($faq[$k]["datum"]));
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Samstag") $frei=true;
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") ?> 
 
