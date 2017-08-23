@@ -19,7 +19,10 @@ else $jahr=date(Y);
 <html>
     <head>
       <title>PHP MySQL Inline Editing using jQuery Ajax</title>
-		<style>
+          <link rel="stylesheet" type="text/css" href="small-style.css" target="_blank">
+          <meta charset="utf-8">
+          <title> Login Page   </title>
+	<!--	<style>
 			body{ padding: 40px; margin: auto; }
 			.current-row{background-color:#B24926;color:#FFF;}
 			.current-col{background-color:#5d501c;color:#FFF;}
@@ -27,7 +30,7 @@ else $jahr=date(Y);
 			.tbl-qa th.table-header {padding: 5px;text-align: left;padding:10px;text-align:center;}
 			.tbl-qa .table-row td {padding:1px;background-color: #FDFDFD;}
                         .hidden { display: none; }
-		</style>
+		</style> -->
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 		function showEdit(editableObj) {
