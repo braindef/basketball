@@ -31,11 +31,11 @@ else $jahr=date(Y);
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script>
 		function showEdit(editableObj) {
-			$(editableObj).css("background","#0FF");
+			//$(editableObj).css("background","#0FF");
 		} 
 		
 		function saveToDatabase(editableObj,column,id) {
-			$(editableObj).css("background","#FF url(loaderIcon.gif) no-repeat right");
+			//$(editableObj).css("background","#FF url(loaderIcon.gif) no-repeat right");
 			$.ajax({
 				url: "saveedit.php",
 				type: "POST",
