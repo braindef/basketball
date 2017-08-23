@@ -86,6 +86,7 @@ else
 
 			  <tr>
 				<th class="table-header hidden" width="10%">id</th>
+				<th class="table-header hidden" width="10%">sql-date</th>
 				<th class="table-header" style="color: white;" width="20%">Datum</th>
 				<th class="table-header" style="color: white;" width="40%">Morgen bis 10:00</th>
 				<th class="table-header" style="color: white;" width="40%">Abends um 18:00</th>
@@ -103,6 +104,7 @@ else
 		?>
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
+				<td class="hidden"><?php echo $faq[$k]["datum"]; ?></td>
 
                                    <?php 
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))=="Samstag") $frei=true;
