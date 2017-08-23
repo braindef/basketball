@@ -94,11 +94,11 @@ else
 		<?php
 		  foreach($faq as $k=>$v)
                   {
+                    $frei=false;
                     if ($faq[$k]["datum"]>sprintf("%04d-%02d-%02d", $jahr, $monat, "0"))
                     {
                       if ($faq[$k]["datum"]<sprintf("%04d-%02d-%02d", $jahr, $monat, "32"))
                       {
-                         $frei=false;
 		?>
 			  <tr class="table-row">
 				<td class="hidden"><?php echo $faq[$k]["id"]; ?></td>
