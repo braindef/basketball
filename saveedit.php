@@ -8,7 +8,5 @@ $result = $db_handle->executeUpdate("UPDATE basketball set " . $_POST["column"] 
 $date = new DateTime();
 $timestamp = $date->getTimestamp();
 $query = "UPDATE basketball set " . $_POST["column"] . " = '".$data."' WHERE  id=".$_POST["id"];
-$result = $db_handle->execute("INSERT into log VALUES (".$timestamp.",".$query.")";
-
-
+$result = $db_handle->execute("INSERT into log VALUES (".$timestamp.",".$query.")");
 ?>
