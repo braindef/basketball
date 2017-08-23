@@ -94,9 +94,9 @@ else
 		<?php
 		  foreach($faq as $k=>$v)
                   {
-                    if ($faq[$k]["datum"]>sprintf("%04d-%02d-%02d", $jahr, $monat, "1"))
+                    if ($faq[$k]["datum"]>sprintf("%04d-%02d-%02d", $jahr, $monat, "0"))
                     {
-                      if ($faq[$k]["datum"]<sprintf("%04d-%02d-%02d", $jahr, $monat, "31"))
+                      if ($faq[$k]["datum"]<sprintf("%04d-%02d-%02d", $jahr, $monat, "32"))
                       {
 		?>
 			  <tr class="table-row">
