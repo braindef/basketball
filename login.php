@@ -13,7 +13,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
      $user = $_POST['user'];
      $pass = $_POST['pass'];
 
-      if($user == "hans" && $pass == "123456") 
+      if($user == "hans" && $pass == "123456")   //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
          {                                     
 
           $_SESSION['user']=$user;
