@@ -103,7 +103,7 @@ else
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))==strftime("%A", strtotime("2017-08-26"))) $frei=true;
                                          if (strftime("%A", strtotime($faq[$k]["datum"]))==strftime("%A", strtotime("2017-08-27"))) $frei=true; ?> 
 
-				<td <?php if($frei) echo "style=\"background-color:#999;\""; //Samstage und Sonntage schwarz ?>
+				<td class="cell" <?php if($frei) echo "style=\"background-color:#999;\""; //Samstage und Sonntage schwarz ?>
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""; //aktuelles Datum Cyan farben ?> >
                                     <?php echo strftime("%A, %d. %B %Y", strtotime($faq[$k]["datum"])); //Datum mit locale de_DE.UTF8 anzeigen?>
                                 </td>
