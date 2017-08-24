@@ -20,7 +20,7 @@ else $jahr=date(Y);
 ?>
 <html>
     <head>
-      <title>PHP MySQL Inline Editing using jQuery Ajax</title>
+      <title>Basketball Korb Plan Telli</title>
           <link rel="stylesheet" type="text/css" href="./small-style.css" target="_blank">
           <meta charset="utf-8">
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
