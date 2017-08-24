@@ -34,7 +34,7 @@ else $jahr=date(Y);
 			$.ajax({
 				url: "saveedit.php",
 				type: "POST",
-				data:'column='+column+'&editval='+editableObj.innerText+'&id='+id,
+				data:'column='+column+'&editval='+editableObj.innerText+'&id='+id, 
 				success: function(data){
 					//$(editableObj).css("background","#FDFDFD");
 				}        
