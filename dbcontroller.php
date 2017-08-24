@@ -14,9 +14,9 @@ class DBController {
 	function connectDB() {
 		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
                 if($conn==false)
-                echo "Database Connection Error";
+                echo "<font color=red>Database Connection Error</font>";
                 else
-                echo "Connected to database";
+                echo "<!--Connected to database-->";
 		return $conn;
 	}
 	
