@@ -1,6 +1,8 @@
 <?php
  session_start();
  setlocale(LC_TIME, "de_DE.UTF-8"); //für deutsche Wochentage und Monate
+ setlocale(LC_TIME, "de_CH.utf8"); //für deutsche Wochentage und Monate
+
 
 require_once("dbcontroller.php");
 $db_handle = new DBController();
@@ -98,8 +100,8 @@ else
 				<td class="hidden"><?php echo $faq[$k]["datum"]; ?></td>
 
                                    <?php 
-                                         if (strftime("%A", strtotime($faq[$k]["datum"]))=="Samstag") $frei=true;
-                                         if (strftime("%A", strtotime($faq[$k]["datum"]))=="Sonntag") $frei=true; ?> 
+                                         if (strftime("%A", strtotime($faq[$k]["datum"]))==strftime("%A", strtotime("2017-08-26"))) $frei=true;
+                                         if (strftime("%A", strtotime($faq[$k]["datum"]))==strftime("%A", strtotime("2017-08-27"))) $frei=true; ?> 
 
 				<td <?php if($frei) echo "style=\"background-color:#999;\""; //Samstage und Sonntage schwarz ?>
                                   <?php if ($faq[$k]["datum"]==date("Y-m-d")) echo "style=\"background-color:#0FF;\""; //aktuelles Datum Cyan farben ?> >
