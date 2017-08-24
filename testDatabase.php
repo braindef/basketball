@@ -7,3 +7,6 @@ $db_handle = new DBController();
 $sql = "SELECT * from basketball";
 $faq = $db_handle->runQuery($sql);
 
+<?php phpinfo(); ?>
+
+?>

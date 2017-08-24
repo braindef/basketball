@@ -1,6 +1,7 @@
 <?php
 class DBController {
 	private $host = "marcland.mysql.db.internal";
+	//private $host = "localhost";
 	private $user = "marcland_telli";
 	private $password = "qayxswedc$";
 	private $database = "marcland_telli";
