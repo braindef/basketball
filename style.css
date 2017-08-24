@@ -43,8 +43,8 @@ body{
   background-color: #FDFDFD;
 }
 
-.cell {
-  text-align:left;
+.date {
+  text-align:right;
 }
 
 .hidden {
