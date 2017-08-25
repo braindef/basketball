@@ -9,24 +9,33 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
+$log = "INSERT INTO log (firstname, lastname, email)
+VALUES (".$timestamp.",".$query.")");
 
-$date = new DateTime();
-$timestamp = $date->getTimestamp();
-$result = $db_handle->executeUpdate("INSERT into log VALUES (".$timestamp.",".$query.")");
-if ($result) echo "log success";
-else echo "log fail";
-?>
-
-
-
-temp
-$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
-
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($log) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$conn->close();
+
+//$date = new DateTime();
+//$timestamp = $date->getTimestamp();
+//$result = $db_handle->executeUpdate("INSERT into log (timestamp, qurey) VALUES (".$timestamp.",".$query.")");
+//if ($result) echo "log success";
+//else echo "log fail";
+?>
+
+
+
+//temp
+//$sql = "INSERT INTO MyGuests (firstname, lastname, email)
+//VALUES ('John', 'Doe', 'john@example.com')";
+
+//if ($conn->query($sql) === TRUE) {
+//    echo "New record created successfully";
+//} else {
+//    echo "Error: " . $sql . "<br>" . $conn->error;
+//}
+
+//$conn->close();
