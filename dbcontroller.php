@@ -9,6 +9,16 @@ class DBController {
 	
 	function __construct() {
 		$this->conn = $this->connectDB();
+
+		if ($result = $mysqli->query("SHOW TABLES LIKE 'basketball'")) {
+		    if($result->num_rows == 1) {
+			return;
+		    }
+		}
+		else {
+			echo "Table does not exist";
+			$this->installDatabase();
+		}
 	}
 	
 	function connectDB() {
@@ -51,5 +61,35 @@ class DBController {
         $result = $this->conn->close();        
 		return $result;		
     	}
+
+	//added:
+        function installDatabase() {
+	# MySQL with PDO_MYSQL  
+	$db = new PDO("mysql:host=$host;dbname=$database", $user, $password);
+
+	$query = file_get_contents("termine.sql");
+
+	$stmt = $db->prepare($query);
+
+	if ($stmt->execute())
+	     echo "Success";
+	else 
+	     echo "Fail";
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 ?>
