@@ -34,6 +34,7 @@ class DBController {
 		$rowcount = mysqli_num_rows($result);
 		return $rowcount;	
 	}
+
 	function executeUpdate($query) {
         $result = mysqli_query($this->conn,$query);        
 		return $result;		
@@ -46,7 +47,7 @@ class DBController {
     	}
 
 	//added:
-	function close($query) {
+	function close() {
         $result = $this->conn->close();        
 		return $result;		
     	}
