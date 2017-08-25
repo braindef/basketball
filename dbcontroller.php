@@ -64,10 +64,10 @@ class DBController {
 
 	//added:
         function installDatabase() {
-		$mysql_host = "marcland.mysql.db.internal";
-		$mysql_database = "marcland_telli";
-		$mysql_user = "marcland_telli";
-		$mysql_password = "qayxswedc$";
+		$mysql_host = $this->host;
+		$mysql_database = $this->database;
+		$mysql_user = $this->user;
+		$mysql_password = $this->password;
 
 		# MySQL with PDO_MYSQL  
 		$db = new PDO("mysql:host=$mysql_host;dbname=$mysql_database", $mysql_user, $mysql_password);
