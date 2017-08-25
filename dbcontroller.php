@@ -47,7 +47,7 @@ class DBController {
 
 	//added:
 	function close($query) {
-        $result $this->conn->close();        
+        $result = $this->conn->close();        
 		return $result;		
     	}
 }
