@@ -13,7 +13,19 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
      $user = $_POST['user'];
      $pass = $_POST['pass'];
 
-      if($user == "hans" && $pass == "123456")   //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
+
+}
+ ?>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" target="_blank">
+    <meta charset="utf-8">
+    <title> Login Page   </title>
+</head>
+<body>
+<div class="login">
+
+<!php      if($user == "hans" && $pass == "123456")   //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
          {                                     
 
           $_SESSION['user']=$user;
@@ -25,18 +37,9 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
         else
         {
-            echo "invalid UserName or Password";        
+            echo "<font color=red>invalid UserName or Password</font>";        
         }
-}
- ?>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css" target="_blank">
-    <meta charset="utf-8">
-    <title> Login Page   </title>
-</head>
-<body>
-<div class="login">
+
   <form action="" method="post">
     <table width="250" border="0">
       <tr>
