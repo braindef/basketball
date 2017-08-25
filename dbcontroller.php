@@ -39,7 +39,7 @@ class DBController {
 		return $result;		
     	}
 
-	} //added:
+	//added:
 	function query($query) {
         $result = mysqli_query($this->conn,$query);        
 		return $result;		
