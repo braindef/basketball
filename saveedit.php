@@ -5,7 +5,7 @@ $data = trim($_POST["editval"]);  //das html macht noch white-spaces die müssen
 $result = $db_handle->executeUpdate("UPDATE basketball set " . $_POST["column"] . " = '".$data."' WHERE  id=".$_POST["id"]);
 
 // Check connection
-if ($conn->connect_error) {
+if ($db_handle->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
@@ -15,7 +15,7 @@ VALUES (".$timestamp.",".$query.")";
 if ($db_handle->query($log) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $log . "<br>" . $conn->error;
 }
 
 
@@ -24,6 +24,7 @@ if ($db_handle->query($log) === TRUE) {
 //$result = $db_handle->executeUpdate("INSERT into log (timestamp, qurey) VALUES (".$timestamp.",".$query.")");
 //if ($result) echo "log success";
 //else echo "log fail";
+$conn->close();
 ?>
 
-//$conn->close();
+
