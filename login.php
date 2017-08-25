@@ -34,8 +34,6 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     <link rel="stylesheet" type="text/css" href="style.css" target="_blank">
     <meta charset="utf-8">
     <title> Login Page   </title>
-
-
 </head>
 <body>
 <div class="login">
@@ -43,7 +41,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     <table width="250" border="0">
       <tr>
         <td>Benutzername</td>
-        <td> <input type="text" name="user" selected="selected"> </td>
+        <td> <input type="text" name="user" autofocus> </td>
       </tr>
         <tr>
           <td>Passwort</td>
