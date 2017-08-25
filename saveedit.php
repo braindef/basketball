@@ -9,5 +9,5 @@ $date = new DateTime();
 $timestamp = $date->getTimestamp();
 $result = $db_handle->executeUpdate("INSERT into log VALUES (".$timestamp.",".$query.")");
 if ($result) echo "log success";
-else echo echo "log fail";
+else echo "log fail";
 ?>
