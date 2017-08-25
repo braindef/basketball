@@ -65,7 +65,7 @@ class DBController {
 	//added:
         function installDatabase() {
 	# MySQL with PDO_MYSQL  
-	$db = new PDO("mysql:host=$host;dbname=$database", $user, $password);
+	$db = new PDO("mysql:host=$this::$host;dbname=$database", $user, $password);
 
 	$query = file_get_contents("termine.sql");
 
@@ -76,18 +76,6 @@ class DBController {
 	else 
 	     echo "Fail";
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
