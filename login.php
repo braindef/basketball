@@ -52,7 +52,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
       </table>
     </form>
 Alle Aktivitäten mit IP Adresse werden gespeichert.
-<?php if ($invalidLogin) echo "<br><font color=red><b>Falscher Benutzername oder Kennwort</b></font>" ?>
+<?php if ($invalidLogin) echo "<br><br><font color=red><b>Falscher Benutzername oder Kennwort</b></font>" ?>
 </div>
 
 </body>
