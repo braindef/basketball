@@ -9,7 +9,15 @@ class DBController {
 	
 	function __construct() {
 		$this->conn = $this->connectDB();
-
+	}
+	
+	function connectDB() {
+		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
+                if($conn==false)
+                echo "<font color=red>Database Connection Error</font>";
+                else
+		{
+                echo "<!--Connected to database-->";
 		if ($result = mysqli_query($this->conn,"SHOW TABLES LIKE 'basketball'")) {
 		    if($result->num_rows == 1) {
 			return;
@@ -19,14 +27,7 @@ class DBController {
 			echo "Table does not exist";
 			$this->installDatabase();
 		}
-	}
-	
-	function connectDB() {
-		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
-                if($conn==false)
-                echo "<font color=red>Database Connection Error</font>";
-                else
-                echo "<!--Connected to database-->";
+		}
 		return $conn;
 	}
 	
