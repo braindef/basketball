@@ -45,12 +45,8 @@ if(!isset($_SESSION['user'])) // If session is not set then redirect to Login Pa
        }
 else
 {
-          //echo $_SESSION['user'];
+          echo '<a href=\'logout.php\'> Logout</a>'; 
 
-          //echo "Login Success";
-
-          echo '<a href=\'logout.php\'> Logout</a> <a href="./index.php">[Heute]</a>'; 
-}
 ?>
 	   <table class="tbl-qa">
 		  <thead>
@@ -78,7 +74,7 @@ else
 			  </tr>
 		
  <?php
-              }
+              } }
    ?>
 		  </tbody>
 		</table>
