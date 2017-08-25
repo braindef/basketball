@@ -28,7 +28,7 @@ if ($db_handle->query($log) === TRUE) {
 //$result = $db_handle->executeUpdate("INSERT into log (timestamp, qurey) VALUES (".$timestamp.",".$query.")");
 //if ($result) echo "log success";
 //else echo "log fail";
-$conn->close();
+$db_handle->close();
 ?>
 
 
