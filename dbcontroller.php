@@ -37,6 +37,12 @@ class DBController {
 	function executeUpdate($query) {
         $result = mysqli_query($this->conn,$query);        
 		return $result;		
-    }
+    	}
+
+	} //added:
+	function query($query) {
+        $result = mysqli_query($this->conn,$query);        
+		return $result;		
+    	}
 }
 ?>
