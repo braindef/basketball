@@ -14,7 +14,7 @@ $date = new DateTime();
 $timestamp = $date->getTimestamp();
 
 $log = "INSERT INTO log (timestamp, query)
-VALUES (\"".$timestamp."\",\"".$query."\")";
+VALUES (\"".$timestamp."\",\"".$_SERVER['REMOTE_ADDR']."\",\"".$_SERVER['HTTP_X_FORWARDED_FOR']."\",\"".$query."\")";
 
 if ($db_handle->query($log) === TRUE) {
     echo "New record created successfully";
@@ -25,7 +25,7 @@ if ($db_handle->query($log) === TRUE) {
 
 //$date = new DateTime();
 //$timestamp = $date->getTimestamp();
-//$result = $db_handle->executeUpdate("INSERT into log (timestamp, qurey) VALUES (".$timestamp.",".$query.")");
+//$result = $db_handle->executeUpdate("INSERT into log (timestamp, ip, proxy, qurey) VALUES (".$timestamp.",".$_SERVER['REMOTE_ADDR'].",".$_SERVER['HTTP_X_FORWARDED_FOR'].",".$query.")");
 //if ($result) echo "log success";
 //else echo "log fail";
 $db_handle->close();

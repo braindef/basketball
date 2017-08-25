@@ -1,6 +1,8 @@
 CREATE TABLE IF NOT EXISTS `log` (
   `id` SMALLINT NOT NULL AUTO_INCREMENT,
   `timestamp` text NOT NULL,
+  `ip` text NOT NULL,
+  `proxy` text NOT NULL,
   `query` text NOT NULL,
   PRIMARY KEY (id)
 );
