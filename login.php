@@ -8,14 +8,6 @@ if(isset($_SESSION['user']))   // Checking whether the session is already there 
     header("Location:index.php"); 
  }
 
-if(isset($_POST['login']))   // it checks whether the user clicked login button or not 
-{
-     $user = $_POST['user'];
-     $pass = $_POST['pass'];
-
-
-}
- ?>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css" target="_blank">
@@ -24,22 +16,6 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 </head>
 <body>
 <div class="login">
-
-<!php      if($user == "hans" && $pass == "123456")   //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
-         {                                     
-
-          $_SESSION['user']=$user;
-
-
-         echo '<script type="text/javascript"> window.open("index.php","_self");</script>';            //  On Successful Login redirects to home.php
-
-        }
-
-        else
-        {
-            echo "<font color=red>invalid UserName or Password</font>";        
-        }
-
   <form action="" method="post">
     <table width="250" border="0">
       <tr>
@@ -54,7 +30,30 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
         <tr></tr>
       </table>
     </form>
-Alle Aktivitäten mit IP Adresse werden gespeichert.
+Alle Aktivitäten mit IP Adresse werden gespeichert.<br>
+<?php
+if(isset($_POST['login']))   // it checks whether the user clicked login button or not 
+{
+     $user = $_POST['user'];
+     $pass = $_POST['pass'];
+
+      if($user == "hans" && $pass == "123456")   //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
+         {                                     
+
+          $_SESSION['user']=$user;
+
+
+         echo '<script type="text/javascript"> window.open("index.php","_self");</script>';            //  On Successful Login redirects to home.php
+
+        }
+
+        else
+        {
+            echo "invalid UserName or Password";        
+        }
+}
+ ?>
+
 </div>
 
 </body>
