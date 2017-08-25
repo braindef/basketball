@@ -66,6 +66,7 @@ class DBController {
         function installDatabase() {
 	# MySQL with PDO_MYSQL 
 	$command = 'mysql:host='.$this->host.';dbname=.'.$this->database.'"' 
+	echo $command;
 	$db = new PDO($command, $this->user, $this->password);
 
 	$query = file_get_contents("termine.sql");
