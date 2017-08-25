@@ -10,7 +10,7 @@ class DBController {
 	function __construct() {
 		$this->conn = $this->connectDB();
 
-		if ($result = $mysqli->query("SHOW TABLES LIKE 'basketball'")) {
+		if ($result = $conn->query("SHOW TABLES LIKE 'basketball'")) {
 		    if($result->num_rows == 1) {
 			return;
 		    }
