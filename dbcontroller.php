@@ -82,4 +82,5 @@ class DBController {
 		     echo "Fail";
 
 	}
+}
 ?>
