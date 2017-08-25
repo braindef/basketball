@@ -12,6 +12,8 @@ if ($conn->connect_error) {
 $log = "INSERT INTO log (firstname, lastname, email)
 VALUES (".$timestamp.",".$query.")";
 
+$conn->query($log);
+
 if ($conn->query($log) === TRUE) {
     echo "New record created successfully";
 } else {
