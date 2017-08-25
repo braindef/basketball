@@ -9,16 +9,16 @@ class DBController {
 	
 	function __construct() {
 		$this->conn = $this->connectDB();
-
-		if ($result = mysqli_query($this->conn,"SHOW TABLES LIKE 'basketball'")) {
-		    if($result->num_rows == 1) {
-			return;
-		    }
-		}
-		else {
-			echo "Table does not exist";
-			$this->installDatabase();
-		}
+//
+//		if ($result = mysqli_query($this->conn,"SHOW TABLES LIKE 'basketball'")) {
+//		    if($result->num_rows == 1) {
+//			return;
+//		    }
+//		}
+//		else {
+//			echo "Table does not exist";
+//			$this->installDatabase();
+//		}
 	}
 	
 	function connectDB() {
