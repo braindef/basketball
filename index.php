@@ -18,6 +18,7 @@ $jahr = $_GET["jahr"];
 else $jahr=date(Y);
 
 ?>
+<!doctype html>
 <html>
     <head>
       <title>Basketball Korb Plan Telli</title>
