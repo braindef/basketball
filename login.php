@@ -7,6 +7,7 @@ if(isset($_SESSION['user']))   // Checking whether the session is already there 
  {
     header("Location:index.php"); 
  }
+?>
 
 <html>
 <head>
