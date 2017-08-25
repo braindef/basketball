@@ -10,7 +10,7 @@ class DBController {
 	function __construct() {
 		$this->conn = $this->connectDB();
 
-		if ($result = mysqli_query("SHOW TABLES LIKE 'basketball'")) {
+		if ($result = mysqli_query($this->conn,"SHOW TABLES LIKE 'basketball'")) {
 		    if($result->num_rows == 1) {
 			return;
 		    }
@@ -65,7 +65,7 @@ class DBController {
 	//added:
         function installDatabase() {
 	# MySQL with PDO_MYSQL  
-	$db = new PDO("mysql:host=$this::$host;dbname=$database", $user, $password);
+	$db = new PDO("mysql:host=".$this->host.";dbname=."$this->database."\"", $this->user, $this->password);
 
 	$query = file_get_contents("termine.sql");
 
