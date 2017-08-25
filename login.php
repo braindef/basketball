@@ -43,7 +43,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     <table width="250" border="0">
       <tr>
         <td>Benutzername</td>
-        <td> <input type="text" name="user" > </td>
+        <td> <input type="text" name="user" selected="selected"> </td>
       </tr>
         <tr>
           <td>Passwort</td>
