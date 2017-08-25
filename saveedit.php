@@ -12,9 +12,7 @@ if ($conn->connect_error) {
 $log = "INSERT INTO log (firstname, lastname, email)
 VALUES (".$timestamp.",".$query.")";
 
-$db_handle->query($log);
-
-if ($conn->query($log) === TRUE) {
+if ($db_handle->query($log) === TRUE) {
     echo "New record created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
@@ -27,17 +25,5 @@ if ($conn->query($log) === TRUE) {
 //if ($result) echo "log success";
 //else echo "log fail";
 ?>
-
-
-
-//temp
-//$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-//VALUES ('John', 'Doe', 'john@example.com')";
-
-//if ($conn->query($sql) === TRUE) {
-//    echo "New record created successfully";
-//} else {
-//    echo "Error: " . $sql . "<br>" . $conn->error;
-//}
 
 //$conn->close();
