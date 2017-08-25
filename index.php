@@ -57,7 +57,7 @@ else
 
           //echo "Login Success";
 
-          echo '<a href='logout.php'> Logout</a> <a style="align:right; color:white" href="./index.php">[Heute]</a>'; 
+          echo '<a href=\'logout.php\'> Logout</a> <a style="align:right; color:white" href="./index.php">[Heute]</a>'; 
 }
 ?>
 	   <table class="tbl-qa">
