@@ -13,7 +13,7 @@ if ($db_handle->connect_error) {
 $date = new DateTime();
 $timestamp = $date->getTimestamp();
 
-$log = "INSERT INTO log (timestamp, query)
+$log = "INSERT INTO log (timestamp,ip, proxy, query)
 VALUES (\"".$timestamp."\",\"".$_SERVER['REMOTE_ADDR']."\",\"".$_SERVER['HTTP_X_FORWARDED_FOR']."\",\"".$query."\")";
 
 if ($db_handle->query($log) === TRUE) {
