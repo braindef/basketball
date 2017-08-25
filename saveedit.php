@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 } 
 
 $log = "INSERT INTO log (firstname, lastname, email)
-VALUES (".$timestamp.",".$query.")");
+VALUES (".$timestamp.",".$query.")";
 
 if ($conn->query($log) === TRUE) {
     echo "New record created successfully";
