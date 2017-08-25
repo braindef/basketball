@@ -9,8 +9,11 @@ if ($db_handle->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$log = "INSERT INTO log (firstname, lastname, email)
-VALUES (".$timestamp.",".$query.")";
+$date = new DateTime();
+$timestamp = $date->getTimestamp();
+
+$log = "INSERT INTO log (timestamp, query)
+VALUES (\"".$timestamp."\",\"".$query."\")";
 
 if ($db_handle->query($log) === TRUE) {
     echo "New record created successfully";
