@@ -44,5 +44,11 @@ class DBController {
         $result = mysqli_query($this->conn,$query);        
 		return $result;		
     	}
+
+	//added:
+	function close($query) {
+        $result $this->conn->close();        
+		return $result;		
+    	}
 }
 ?>
