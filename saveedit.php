@@ -2,7 +2,7 @@
 require_once("dbcontroller.php");
 $db_handle = new DBController();
 $data = trim($_POST["editval"]);  //das html macht noch white-spaces die müssen weg
-$query = "UPDATE basketball set " . $_POST["column"] . " = '".$data."' WHERE  id=".$_POST["id"]:
+$query = "UPDATE basketball set " . $_POST["column"] . " = '".$data."' WHERE  id=".$_POST["id"];
 $result = $db_handle->executeUpdate($query);
 
 // Check connection
