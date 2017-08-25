@@ -64,24 +64,22 @@ class DBController {
 
 	//added:
         function installDatabase() {
-$mysql_host = "marcland.mysql.db.internal";
-$mysql_database = "marcland_telli";
-$mysql_user = "marcland_telli";
-$mysql_password = "qayxswedc$";
+		$mysql_host = "marcland.mysql.db.internal";
+		$mysql_database = "marcland_telli";
+		$mysql_user = "marcland_telli";
+		$mysql_password = "qayxswedc$";
 
-# MySQL with PDO_MYSQL  
-$db = new PDO("mysql:host=$mysql_host;dbname=$mysql_database", $mysql_user, $mysql_password);
+		# MySQL with PDO_MYSQL  
+		$db = new PDO("mysql:host=$mysql_host;dbname=$mysql_database", $mysql_user, $mysql_password);
 
-$query = file_get_contents("termine.sql");
+		$query = file_get_contents("termine.sql");
 
-$stmt = $db->prepare($query);
+		$stmt = $db->prepare($query);
 
-if ($stmt->execute())
-     echo "Success";
-else 
-     echo "Fail";
+		if ($stmt->execute())
+		     echo "Success";
+		else 
+		     echo "Fail";
 
-
-
-}
+	}
 ?>
