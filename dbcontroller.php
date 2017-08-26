@@ -1,6 +1,4 @@
 <?php
-//if $_GET["install"]==1
-
 if ($_GET["install"]==1)
 {
 	echo "Installing Database";
@@ -17,8 +15,8 @@ if ($_GET["test"]==1)
 }
 
 class DBController {
-	private $host = "marcland.mysql.db.internal";
-	//private $host = "localhost"; 
+	//private $host = "marcland.mysql.db.internal";
+	private $host = "localhost"; 
 	private $user = "marcland_telli";
 	private $password = "qayxswedc$";  //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
 	private $database = "marcland_telli";

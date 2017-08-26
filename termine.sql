@@ -1,3 +1,11 @@
+CREATE USER 'marcland_telli'@'localhost' IDENTIFIED BY 'qayxswedc$';
+GRANT ALL PRIVILEGES ON *.* TO 'marcland_telli'@'localhost' WITH GRANT OPTION;
+
+CREATE DATABASE marcland_telli;
+
+use marcland_telli;
+
+
 CREATE TABLE IF NOT EXISTS `log` (
   `id` SMALLINT NOT NULL AUTO_INCREMENT,
   `timestamp` text NOT NULL,
@@ -16,13 +24,6 @@ CREATE TABLE IF NOT EXISTS `basketball` (
   PRIMARY KEY (id)
 );
 
-
-CREATE USER 'marcland_telli'@'localhost' IDENTIFIED BY 'qayxswedc$';
-GRANT ALL PRIVILEGES ON *.* TO 'marcland_telli'@'localhost' WITH GRANT OPTION;
-
-CREATE DATABASE marcland_telli;
-
-USE marcland_telli;
 
 CREATE TABLE IF NOT EXISTS `test` (
 	  `id` SMALLINT NOT NULL AUTO_INCREMENT,
