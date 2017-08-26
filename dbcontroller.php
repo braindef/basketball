@@ -70,7 +70,9 @@ class DBController {
 		}
 
 		foreach($this->db->query('SELECT * FROM test') as $row) {
-			
+			array_push($resultset,$row);		
+			print_r($resultset);
+		}	
 	}
 
 
