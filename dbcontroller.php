@@ -65,7 +65,7 @@ class DBController {
 	function test() {
 		try {
 			//connect as appropriate as above
-			$tjos->db->query('hi'); //invalid query!
+			$this->db->query('hi'); //invalid query!
 		} catch(PDOException $ex) {
 			echo "An Error occured!"; //user friendly message
 			//some_logging_function($ex->getMessage());
