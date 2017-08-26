@@ -1,7 +1,7 @@
 <?php
 //if $_GET["install"]==1
 
-if ($_GET["test"]==1)
+if ($_GET["install"]==1)
 {
 	echo "Installing Database";
 	$db_handle = new DBController();
