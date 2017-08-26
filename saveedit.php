@@ -17,12 +17,6 @@ if ($db_handle->query($log) === TRUE) {
     echo "Error: " . $log . "<br>" . $conn->error;
 }
 
-
-//$date = new DateTime();
-//$timestamp = $date->getTimestamp();
-//$result = $db_handle->executeUpdate("INSERT into log (timestamp, ip, proxy, qurey) VALUES (".$timestamp.",".$_SERVER['REMOTE_ADDR'].",".$_SERVER['HTTP_X_FORWARDED_FOR'].",".$query.")");
-//if ($result) echo "log success";
-//else echo "log fail";
 $db_handle->close();
 ?>
 
