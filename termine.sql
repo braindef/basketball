@@ -17,21 +17,26 @@ CREATE TABLE IF NOT EXISTS `basketball` (
 );
 
 
+CREATE USER 'marcland_telli'@'localhost' IDENTIFIED BY 'qayxswedc$';
+GRANT ALL PRIVILEGES ON *.* TO 'marcland_telli'@'localhost' WITH GRANT OPTION;
+
+CREATE DATABASE marcland_telli;
+
+USE marcland_telli;
+
 CREATE TABLE IF NOT EXISTS `test` (
-	`id` SMALLINT NOT NULL AUTO_INCREMENT,
-	`morgen` text NOT NULL,
-	`abends` text NOT NULL,
-	PRIMARY KEY (id)
-);
+	  `id` SMALLINT NOT NULL AUTO_INCREMENT,
+	  `datum` DATE NOT NULL UNIQUE,
+	  `morgen` text NOT NULL,
+	  `abends` text NOT NULL,
+	  PRIMARY KEY (id)
+	);
 
-
-INSERT INTO `test` (`morgen`, `abends`) VALUES
-('Hauswart Telli', ''),
-('Hauswart Telli', ''),
-('Hauswart Telli', ''),
-('Hauswart Telli', ''),
-('Hauswart Telli', ''),
-
+INSERT INTO `test` (`datum`, `morgen`, `abends`) VALUES
+	('2017-7-19', 'Hauswart Telli', '1'),
+	('2017-7-20', '2', 'Hauswart Telli'),
+	('2017-7-21', 'Hauswart Telli', '3'),
+	('2017-7-22', 'Hauswart Telli', '4');
 
 
 INSERT INTO `basketball` (`datum`, `morgen`, `abends`) VALUES
