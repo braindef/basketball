@@ -86,8 +86,8 @@ class DBController {
 
 	function runQuery($query) {
 		foreach($this->db->query($query) as $row) {
-			array_push($resultset,$row)		
-			//print_r($resultset);
+			array_push($resultset,$row);		
+			print_r($resultset);
 		}
 		if(!empty($resultset))
 		return $resultset;
