@@ -87,10 +87,16 @@ class DBController {
 //	}
 
 	function runQuery($query) {
-		$resultset = $this->db->query($query); // as $row) {
+		$pdoStatement = $this->db->query($query); // as $row) {
 			//array_push($resultset,$row);		
 			//print_r($resultset);
 		//}
+//$sth = $dbh->prepare("SELECT name, colour FROM fruit");
+$sth->execute();
+
+		$resultset = $pdoStatement->fetchAll();
+		print_r($resultset);
+
 		if(!empty($resultset))
 		return $resultset;
 	}
