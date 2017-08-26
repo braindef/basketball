@@ -8,7 +8,6 @@ CREATE TABLE IF NOT EXISTS `log` (
 );
 
 
-
 CREATE TABLE IF NOT EXISTS `basketball` (
   `id` SMALLINT NOT NULL AUTO_INCREMENT,
   `datum` DATE NOT NULL UNIQUE,
@@ -16,6 +15,24 @@ CREATE TABLE IF NOT EXISTS `basketball` (
   `abends` text NOT NULL,
   PRIMARY KEY (id)
 );
+
+
+CREATE TABLE IF NOT EXISTS `test` (
+	`id` SMALLINT NOT NULL AUTO_INCREMENT,
+	`morgen` text NOT NULL,
+	`abends` text NOT NULL,
+	PRIMARY KEY (id)
+);
+
+
+INSERT INTO `test` (`morgen`, `abends`) VALUES
+('Hauswart Telli', ''),
+('Hauswart Telli', ''),
+('Hauswart Telli', ''),
+('Hauswart Telli', ''),
+('Hauswart Telli', ''),
+
+
 
 INSERT INTO `basketball` (`datum`, `morgen`, `abends`) VALUES
 ('2017-7-19', 'Hauswart Telli', ''),
@@ -549,3 +566,5 @@ INSERT INTO `basketball` (`datum`, `morgen`, `abends`) VALUES
 ('2018-12-29', 'Hauswart Telli', ''),
 ('2018-12-30', 'Hauswart Telli', ''),
 ('2018-12-31', 'Hauswart Telli', '');
+
+
