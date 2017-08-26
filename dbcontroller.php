@@ -25,22 +25,16 @@ class DBController {
 	private $conn;
 	private $db;
 	
-//	function __construct() {
-//		$this->conn = $this->connectDB();
-//	}
-	
 	function __construct() {
 		$this->db = $this->connectDB();
 	}
 	
-
 	function connectDB() {
 		$db = new PDO('mysql:host='.$this->host.';dbname='.$this->database.';charset=utf8mb4',$this->user, $this->password);
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 		return $db;
 	}
-
 
 	function runQuery($query) {
 		$pdoStatement = $this->db->query($query); // as $row) {
@@ -57,7 +51,6 @@ class DBController {
 		return $resultset;
 	}
 	
-
 	function executeUpdate($query) {
 		try {
 
@@ -79,8 +72,21 @@ class DBController {
 
 	//added:
 	function query($query) {
-        $result = mysqli_query($this->conn,$query);        
-		return $result;		
+		try {
+
+			// Prepare statement
+    			$stmt = $this->db->prepare($query);
+
+			// execute the query
+			$stmt->execute();
+
+			// echo a message to say the UPDATE succeeded
+			echo $stmt->rowCount() . " records UPDATED successfully";
+		}
+		catch(PDOException $e)
+		{
+		echo $query . "<br>" . $e->getMessage();
+    		}
     	}
 
 	//added:
