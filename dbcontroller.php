@@ -23,9 +23,14 @@ class DBController {
 	private $password = "qayxswedc$";  //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
 	private $database = "marcland_telli";
 	private $conn;
+	private $db
+	
+//	function __construct() {
+//		$this->conn = $this->connectDB();
+//	}
 	
 	function __construct() {
-		$this->conn = $this->connectDB();
+		$this->db = $this->connectDB();
 	}
 	
 //	function connectDB() {
@@ -60,13 +65,13 @@ class DBController {
 	function test() {
 		try {
 			//connect as appropriate as above
-			$db->query('hi'); //invalid query!
+			$tjos->db->query('hi'); //invalid query!
 		} catch(PDOException $ex) {
 			echo "An Error occured!"; //user friendly message
 			//some_logging_function($ex->getMessage());
 		}
 
-		foreach($db->query('SELECT * FROM test') as $row) {
+		foreach($this->db->query('SELECT * FROM test') as $row) {
 			    echo "Morgen: ". $row['morgen'].' abends: '.$row['abends']."<br>";
 		}
 }
