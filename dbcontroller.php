@@ -58,9 +58,7 @@ class DBController {
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 		return $db;
-}
-
-
+	}
 
 	function test() {
 		try {
@@ -72,26 +70,35 @@ class DBController {
 		}
 
 		foreach($this->db->query('SELECT * FROM test') as $row) {
-			    echo "Morgen: ". $row['morgen'].' abends: '.$row['abends']."<br>";
-		}
-}
+			
+	}
 
 
 	
+//	function runQuery($query) {
+//		$result = mysqli_query($this->conn,$query);
+//		while($row=mysqli_fetch_assoc($result)) {
+//			$resultset[] = $row;
+//		}		
+//		if(!empty($resultset))
+//			return $resultset;
+//	}
+
 	function runQuery($query) {
-		$result = mysqli_query($this->conn,$query);
-		while($row=mysqli_fetch_assoc($result)) {
-			$resultset[] = $row;
-		}		
+		$this->db->query($query)
+		foreach(($query) as $row) {
+			array_push($resultset,$row)		
+			print_r($resultset);
+		}
 		if(!empty($resultset))
-			return $resultset;
+		return $resultset;
 	}
 	
-	function numRows($query) {
-		$result = mysqli_query($this->conn,$query);
-		$rowcount = mysqli_num_rows($result);
-		return $rowcount;	
-	}
+//	function numRows($query) {
+//		$result = mysqli_query($this->conn,$query);
+//		$rowcount = mysqli_num_rows($result);
+//		return $rowcount;	
+//	}
 
 	function executeUpdate($query) {
         $result = mysqli_query($this->conn,$query);        
