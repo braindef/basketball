@@ -87,7 +87,7 @@ class DBController {
 //	}
 
 	function runQuery($query) {
-		$resultset = $this->db->query($query) // as $row) {
+		$resultset = $this->db->query($query); // as $row) {
 			//array_push($resultset,$row);		
 			//print_r($resultset);
 		//}
