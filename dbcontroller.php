@@ -107,10 +107,29 @@ class DBController {
 //		return $rowcount;	
 //	}
 
+//	function executeUpdate($query) {
+//        $result = mysqli_query($this->conn,$query);        
+//		return $result;		
+//    	}
+
 	function executeUpdate($query) {
-        $result = mysqli_query($this->conn,$query);        
-		return $result;		
-    	}
+		try {
+
+			// Prepare statement
+    			$stmt = $conn->prepare($query);
+
+			// execute the query
+			$stmt->execute();
+
+			// echo a message to say the UPDATE succeeded
+			echo $stmt->rowCount() . " records UPDATED successfully";
+		}
+		catch(PDOException $e)
+		{
+		echo $query . "<br>" . $e->getMessage();
+    		}
+
+	}
 
 	//added:
 	function query($query) {
