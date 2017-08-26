@@ -23,7 +23,7 @@ class DBController {
 	private $password = "qayxswedc$";  //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
 	private $database = "marcland_telli";
 	private $conn;
-	private $db
+	private $db;
 	
 //	function __construct() {
 //		$this->conn = $this->connectDB();
