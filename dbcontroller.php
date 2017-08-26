@@ -92,7 +92,7 @@ class DBController {
 			//print_r($resultset);
 		//}
 //$sth = $dbh->prepare("SELECT name, colour FROM fruit");
-$sth->execute();
+//$sth->execute();
 
 		$resultset = $pdoStatement->fetchAll();
 		print_r($resultset);
