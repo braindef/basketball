@@ -91,11 +91,11 @@ class DBController {
 			//array_push($resultset,$row);		
 			//print_r($resultset);
 		//}
-//$sth = $dbh->prepare("SELECT name, colour FROM fruit");
-//$sth->execute();
+		//$sth = $dbh->prepare("SELECT name, colour FROM fruit");
+		//$sth->execute();
 
 		$resultset = $pdoStatement->fetchAll();
-		print_r($resultset);
+		//print_r($resultset);
 
 		if(!empty($resultset))
 		return $resultset;
