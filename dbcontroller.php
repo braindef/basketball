@@ -33,25 +33,6 @@ class DBController {
 		$this->db = $this->connectDB();
 	}
 	
-//	function connectDB() {
-//		$conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
-//                if($conn==false)
-//                echo "<font color=red>Database Connection Error</font>";
-//                else
-//		{
-//                echo "<!--Connected to database-->";
-//		if ($result = mysqli_query($this->conn,"SHOW TABLES LIKE 'basketball'")) {
-//		    if($result->num_rows == 1) {
-//			return;
-//		    }
-//		}
-//		else {
-//			echo "Table does not exist";
-//			$this->installDatabase();
-//		}
-//		}
-//		return $conn;
-//	}
 
 	function connectDB() {
 		$db = new PDO('mysql:host='.$this->host.';dbname='.$this->database.';charset=utf8mb4',$this->user, $this->password);
@@ -60,36 +41,11 @@ class DBController {
 		return $db;
 	}
 
-	function test() {
-		try {
-			//connect as appropriate as above
-			$this->db->query('hi'); //invalid query!
-		} catch(PDOException $ex) {
-			echo "An Error occured!"; //user friendly message
-			//some_logging_function($ex->getMessage());
-		}
-		$resultset=array();
-		foreach($this->db->query('SELECT * FROM test') as $row) {
-			array_push($resultset,$row);		
-			print_r($resultset);
-		}	
-	}
-
-
-	
-//	function runQuery($query) {
-//		$result = mysqli_query($this->conn,$query);
-//		while($row=mysqli_fetch_assoc($result)) {
-//			$resultset[] = $row;
-//		}		
-//		if(!empty($resultset))
-//			return $resultset;
-//	}
 
 	function runQuery($query) {
 		$pdoStatement = $this->db->query($query); // as $row) {
-			//array_push($resultset,$row);		
-			//print_r($resultset);
+		//array_push($resultset,$row);		
+		//print_r($resultset);
 		//}
 		//$sth = $dbh->prepare("SELECT name, colour FROM fruit");
 		//$sth->execute();
@@ -101,16 +57,6 @@ class DBController {
 		return $resultset;
 	}
 	
-//	function numRows($query) {
-//		$result = mysqli_query($this->conn,$query);
-//		$rowcount = mysqli_num_rows($result);
-//		return $rowcount;	
-//	}
-
-//	function executeUpdate($query) {
-//        $result = mysqli_query($this->conn,$query);        
-//		return $result;		
-//    	}
 
 	function executeUpdate($query) {
 		try {
@@ -142,6 +88,23 @@ class DBController {
         $result = $this->conn->close();        
 		return $result;		
     	}
+
+	//added:
+	function test() {
+		try {
+			//connect as appropriate as above
+			$this->db->query('hi'); //invalid query!
+		} catch(PDOException $ex) {
+			echo "An Error occured!"; //user friendly message
+			//some_logging_function($ex->getMessage());
+		}
+		$resultset=array();
+		foreach($this->db->query('SELECT * FROM test') as $row) {
+			array_push($resultset,$row);		
+			print_r($resultset);
+		}	
+	}
+
 
 	//added:
         function installDatabase() {
