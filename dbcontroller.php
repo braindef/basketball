@@ -116,7 +116,7 @@ class DBController {
 		try {
 
 			// Prepare statement
-    			$stmt = $conn->prepare($query);
+    			$stmt = $this->db->prepare($query);
 
 			// execute the query
 			$stmt->execute();
