@@ -99,13 +99,15 @@ class DBController {
 			//connect as appropriate as above
 			$this->db->query('hi'); //invalid query!
 		} catch(PDOException $ex) {
-			echo "An Error occured!"; //user friendly message
+			echo "wrong query not executed"; //user friendly message
 			//some_logging_function($ex->getMessage());
 		}
 		$resultset=array();
 		foreach($this->db->query('SELECT * FROM test') as $row) {
+			echo "<pre>";
 			array_push($resultset,$row);		
 			print_r($resultset);
+			echo "</pre>";
 		}	
 	}
 
