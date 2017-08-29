@@ -67,7 +67,7 @@ else
 		?>
 			  <tr class="table-row">
 				<td><?php echo $faq[$k]["id"]; ?></td>
-				<td><?php echo $faq[$k]["timestamp"]; ?></td>
+				<td><?php echo date('Y-m-d H:i:s', $faq[$k]["timestamp"]); ?></td>
 				<td><?php echo $faq[$k]["ip"]; ?></td>
 				<td><?php echo $faq[$k]["proxy"]; ?></td>
 				<td><?php echo $faq[$k]["query"]; ?></td>

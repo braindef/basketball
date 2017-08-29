@@ -5,7 +5,7 @@
 if(isset($_SESSION['user']))   // Checking whether the session is already there or not if 
                               // true then header redirect it to the home page directly 
  {
-    header("Location:index.php"); 
+    header("Location:agenda.php"); 
  }
 
 if(isset($_POST['login']))   // it checks whether the user clicked login button or not 
@@ -13,13 +13,13 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
      $user = $_POST['user'];
      $pass = $_POST['pass'];
 
-      if($user == "hans" && $pass == "123456")   //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
+      if($user == "basketball" && $pass == "123456")   //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
          {                                     
 
           $_SESSION['user']=$user;
 
 
-         echo '<script type="text/javascript"> window.open("index.php","_self");</script>';            //  On Successful Login redirects to home.php
+         echo '<script type="text/javascript"> window.open("agenda.php","_self");</script>';            //  On Successful Login redirects to home.php
 
         }
 

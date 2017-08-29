@@ -7,9 +7,38 @@ font-family: monospace; }
 */
 
 
-body{
+body {
   padding: 40px;
   margin: auto; 
+}
+
+pre {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+}
+
+.startseite
+{
+  font-size:1.35em;
+  display:inline-block;
+  width: 25%;;
+  height:5⁴0px;
+  cursor:pointer;cursor:hand;
+  border:none;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    margin:30px;
+    padding:30px;
 }
 
 .current-row {
