@@ -41,13 +41,13 @@ foreach($faq as $k=>$v)
   //wenn morgen leer dann senden setzen
   if ($faq[$k]["morgen"]=="")
   {
-     echo "Morgen fehlt ";
+     echo "Morgen fehlt. ";
      $send = true;
   }     
 
   //wenn abends leer dann senden setzen
   if ($faq[$k]["abends"]=="")
-  {  echo "Abend fehlt ";
+  {  echo "Abend fehlt. ";
      $send = true;
   }
 }
