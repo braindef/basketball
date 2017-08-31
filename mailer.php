@@ -30,7 +30,7 @@ $frei = false;
 $send = false;
 
 $sql = "SELECT * from basketball where datum=\"".$tomorrow."\"";
-echo $sql;
+echo $sql . " \n";
 $faq = $db_handle->runQuery($sql);
 
 foreach($faq as $k=>$v)
@@ -56,6 +56,6 @@ foreach($faq as $k=>$v)
 if ($send&&!$frei) mail($to,$subject,$txt,$headers);
 else
 {  echo "Sende nicht";
-   if ($frei) echo " weil wochenende";
+   if ($frei) echo " weil Morgen Wochenende ist";
 }
 ?>
