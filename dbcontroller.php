@@ -1,26 +1,28 @@
 <?php
-if ($_GET["install"]==1)
-{
-	echo "Installing Database";
-	$db_handle = new DBController();
-	$db_handle->installDatabase();
-}
+if (isset($_GET["install"]))
+  if ($_GET["install"]==1)
+  {
+	  echo "Installing Database";
+	  $db_handle = new DBController();
+	  $db_handle->installDatabase();
+  }
 
 
-if ($_GET["test"]==1)
-{
-	echo "Testing Database";
-	$db_handle = new DBController();
-	$db_handle->test();
-}
+if (isset($_GET["test"]))
+  if ($_GET["test"]==1)
+  {
+	  echo "Testing Database";
+	  $db_handle = new DBController();
+	  $db_handle->test();
+  }
 
 class DBController {
 
-	private $host = "marcland.mysql.db.internal";
+	private $host = "localhost";
 	//private $host = "localhost"; 
-	private $user = "marcland_telli";
-	private $password = "qayxswedc$";  //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
-	private $database = "marcland_telli";
+	private $user = "dos";
+	private $password = "dos";  //bitte das produktive Passwort nicht öffentlich auf dem Github Server speichern.
+	private $database = "dos";
 	private $conn;
 	private $db;
 	
